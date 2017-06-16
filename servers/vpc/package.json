@@ -1,0 +1,17 @@
+{
+  "name": "VPC",
+  "version": "1.0.0",
+  "description": "AWS VPC Server Instance",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "[VPC]"
+  ],
+  "author": "StudyBank LLC",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "aws-sdk": "^2.69.0"
+  }
+}

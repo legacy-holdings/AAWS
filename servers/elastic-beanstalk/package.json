@@ -1,0 +1,17 @@
+{
+  "name": "elastic-beanstalk",
+  "version": "1.0.0",
+  "description": "AWS Elastic Beanstalk Server Instance",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "[ELASTIC_BEANSTALK]"
+  ],
+  "author": "StudyBank LLC",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "aws-sdk": "^2.69.0"
+  }
+}
