@@ -5,26 +5,21 @@
     top: 10px;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: black;
     font-size: 3vw;
 } 
 
-@media (max-width: 600px) {
-  .welcome-header {
-      max-width: 100%;
-      padding-right: 20px;
-      position: absolute;
-      top: 10px;
-      font-weight: bold;
-      text-align: center;
-      color: white;
-      font-size: 22px;
-  } 
+.aws-logo {
+    height: 14vw;
+    width: 14vw;
+    margin-bottom: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 600px) {
   .aws-logo {
-
+    height: 20vw;
+    width: 20vw;
+    margin-bottom: 20px;
   }
 
   .welcome-header {
@@ -34,7 +29,45 @@
       top: 10px;
       font-weight: bold;
       text-align: center;
-      color: white;
+      color: black;
+      font-size: 22px;
+  } 
+}
+
+@media (min-width: 1200px) {
+  .aws-logo {
+    height: 10vw;
+    width: 10vw;
+    margin-bottom: 20;
+  }
+
+  .welcome-header {
+      max-width: 100%;
+      padding-right: 20px;
+      position: absolute;
+      top: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+      font-size: 40px;
+  } 
+}
+
+@media (min-width: 1600px) {
+  .aws-logo {
+    height: 6vw;
+    width: 6vw;
+    margin-bottom: 20;
+  }
+
+  .welcome-header {
+      max-width: 100%;
+      padding-right: 20px;
+      position: absolute;
+      top: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: black;
       font-size: 40px;
   } 
 }
