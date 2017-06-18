@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Jumbotron, Image } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { List, ListItem } from "material-ui/List";
 import {
   Card,
@@ -27,6 +28,8 @@ import Security from "material-ui/svg-icons/hardware/security";
 import Settings from "material-ui/svg-icons/action/settings";
 import Particles from "react-particles-js";
 import FontIcon from "material-ui/FontIcon";
+import Cloud from "material-ui/svg-icons/file/cloud";
+import RaisedButton from "material-ui/RaisedButton";
 import {
   BottomNavigation,
   BottomNavigationItem
@@ -58,52 +61,181 @@ export default class Welcome extends Component {
 
     return (
       <div>
-        <Col
-          xs={12}
-          style={{
-            textAlign: "center",
-            background: "white",
-            minHeight: 300,
-            maxHeight: 700,
-            marginBottom: 10
-          }}
-        >
-          {/*<Image
+        <Row style={{ marginBottom: 60 }}>
+          <Col
+            xs={12}
+            style={{
+              textAlign: "center",
+              background: "white",
+              minHeight: 300,
+              maxHeight: 700,
+              marginBottom: 20
+            }}
+          >
+            {/*<Image
             src={require("./images/nn-green.jpg")}
             style={{ width: 1150, maxHeight: 750, opacity: 0.09 }}
             responsive
           />*/}
-          <div style={{ width: "100%", minHeight: 300, maxHeight: 700 }}>
-            <Particles
-              minHeight="100%"
-              params={{
-                particles: {
-                  line_linked: {
-                    shadow: {
-                      enable: true,
-                      color: "black",
-                      blur: 1
+            <div style={{ width: "100%", minHeight: 300, maxHeight: 700 }}>
+              <Particles
+                minHeight="100%"
+                params={{
+                  particles: {
+                    line_linked: {
+                      shadow: {
+                        enable: true,
+                        color: "black",
+                        blur: 1
+                      }
                     }
                   }
-                }
-              }}
-            />
-          </div>
-          <Row>
-            <Col xs={10} xsOffset={1} className="welcome-header">
-              Launch a personalized <br />
-              <span style={{ fontStyle: "italic" }}>"Hello World"</span> <br />
-              <a href="https://aws.amazon.com/" target="_blank">
-                <img
-                  className="aws-logo"
-                  src={require("./images/aws-logo.png")}
-                />
-              </a>
-              <br />
-              production-ready, virtual platform in 5 minutes!
-            </Col>
-          </Row>
-        </Col>
+                }}
+              />
+            </div>
+            <Row>
+              <Col xs={10} xsOffset={1} className="welcome-header">
+                Launch a personalized <br />
+                <span style={{ fontStyle: "italic" }}>"Hello World"</span>
+                {" "}
+                <br />
+                <a href="https://aws.amazon.com/" target="_blank">
+                  <img
+                    className="aws-logo"
+                    src={require("./images/aws-logo.png")}
+                  />
+                </a>
+                <br />
+                production-ready, virtual platform in 5 minutes!
+              </Col>
+            </Row>
+            <hr />
+            <Row>
+              <Col
+                xs={10}
+                xsOffset={1}
+                sm={10}
+                smOffset={1}
+                md={4}
+                mdOffset={0}
+                lg={4}
+                lgOffset={0}
+                style={{
+                  textAlign: "center",
+                  marginBottom: 20,
+                  marginTop: 0,
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  fontStyle: "italic"
+                }}
+              >
+                {/*<Card
+                  style={{
+                    background: "black",
+                    marginBottom: 10,
+                    minHeight: 140
+                  }}
+                >*/}
+                <NavLink to="/quickstart">
+                  <RaisedButton
+                    label="Go Cloud"
+                    icon={
+                      <Cloud
+                        style={{
+                          width: 50,
+                          height: 50,
+                          marginBottom: 5,
+                          marginTop: 5,
+                          color: "white"
+                        }}
+                      />
+                    }
+                    style={{ width: "90%", height: 110 }}
+                    primary={true}
+                  />
+                </NavLink>
+                {/*</Card>*/}
+              </Col>
+              <Col
+                xs={10}
+                xsOffset={1}
+                sm={10}
+                smOffset={1}
+                md={4}
+                mdOffset={0}
+                lg={4}
+                lgOffset={0}
+                style={{
+                  textAlign: "center",
+                  marginBottom: 20,
+                  marginTop: 0,
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  display: "block"
+                }}
+              >
+                <NavLink to="/quickstart">
+                  <RaisedButton
+                    label="Go Mobile"
+                    icon={
+                      <Iphone
+                        style={{
+                          width: 50,
+                          height: 50,
+                          marginBottom: 5,
+                          marginTop: 5,
+                          color: "white"
+                        }}
+                      />
+                    }
+                    style={{ width: "90%", height: 110 }}
+                    primary={true}
+                  />
+                </NavLink>
+              </Col>
+              <Col
+                xs={10}
+                xsOffset={1}
+                sm={10}
+                smOffset={1}
+                md={4}
+                mdOffset={0}
+                lg={4}
+                lgOffset={0}
+                style={{
+                  textAlign: "center",
+                  marginBottom: 20,
+                  marginTop: 0,
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  display: "block"
+                }}
+              >
+                <NavLink to="/quickstart">
+                  <RaisedButton
+                    label="Go Web"
+                    icon={
+                      <Computer
+                        style={{
+                          width: 50,
+                          height: 50,
+                          marginBottom: 5,
+                          marginTop: 5,
+                          color: "white"
+                        }}
+                      />
+                    }
+                    style={{ width: "90%", height: 110 }}
+                    primary={true}
+                  />
+                </NavLink>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        <hr />
         {/*<Col xs={12}>
           <div
             style={{
@@ -116,103 +248,142 @@ export default class Welcome extends Component {
             }}
           />
         </Col>*/}
-        <Col xs={12}>
-          <Card style={{ marginTop: 10, marginBottom: 10 }}>
-            <Row>
-              <Col xs={12} style={{ marginTop: 20, marginBottom: 80 }}>
-                <h3 style={{ textAlign: "center", padding: 10 }}>
-                  Build once, deploy everywhere!
-                </h3>
-              </Col>
-              <Col
-                xs={8}
-                xsOffset={2}
-                sm={6}
-                smOffset={3}
-                md={4}
-                mdOffset={4}
-                lg={5}
-                lgOffset={1}
-              >
-                <Image
-                  src={require("./images/responsive_web_design.png")}
-                  responsive
-                />
-                <br />
-              </Col>
-              <Col xs={8} xsOffset={2} sm={6} smOffset={3} lg={5} lgOffset={1}>
-                <List>
-                  <ListItem primaryText="Build Now!" leftIcon={<Extension />} />
-                  <ListItem
-                    primaryText="Simple Intuitive UI/UX"
-                    leftIcon={<ColorLens />}
+        <Row>
+          <Col xs={12}>
+            <Card style={{ marginTop: 10, marginBottom: 10 }}>
+              <Row>
+                <Col xs={12} style={{ marginTop: 20, marginBottom: 80 }}>
+                  <h3 style={{ textAlign: "center", padding: 10 }}>
+                    Build once, deploy everywhere!
+                    <hr />
+                  </h3>
+                </Col>
+                <Col
+                  xs={8}
+                  xsOffset={2}
+                  sm={6}
+                  smOffset={3}
+                  md={4}
+                  mdOffset={4}
+                  lg={5}
+                  lgOffset={1}
+                >
+                  <Image
+                    src={require("./images/responsive_web_design.png")}
+                    responsive
                   />
-                  <ListItem
-                    primaryText="Application Management and Auto Scaling"
-                    leftIcon={<Dashboard />}
+                  <br />
+                </Col>
+                <Col
+                  xs={8}
+                  xsOffset={2}
+                  sm={6}
+                  smOffset={3}
+                  lg={5}
+                  lgOffset={1}
+                >
+                  <List>
+                    <NavLink to="/quickstart">
+                      <ListItem
+                        primaryText="Build Now!"
+                        leftIcon={<Extension />}
+                      />
+                    </NavLink>
+                    <ListItem
+                      primaryText="Simple Intuitive UI/UX"
+                      leftIcon={<ColorLens />}
+                    />
+                    <ListItem
+                      primaryText="Application Management and Auto Scaling"
+                      leftIcon={<Dashboard />}
+                    />
+                    <ListItem
+                      primaryText="Production-ready and Secure"
+                      leftIcon={<Security />}
+                    />
+                    <ListItem
+                      primaryText="Services/Products"
+                      leftIcon={<Settings />}
+                    />
+                    {/*<ListItem primaryText="Inbox" leftIcon={< />} />*/}
+                  </List>
+                  <br />
+                </Col>
+              </Row>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <Card style={{ marginTop: 10, marginBottom: 10 }}>
+              <Row>
+                <Col xs={12} style={{ marginTop: 20, marginBottom: 80 }}>
+                  <h3 style={{ textAlign: "center", padding: 20 }}>
+                    Superior Simplicity <br />
+                    <span style={{ fontWeight: "bold", fontSize: 20 }}>
+                      (Security, Infrastructure and Technology Stack)
+                    </span>
+                    <hr />
+                  </h3>
+                </Col>
+                <Col
+                  xs={8}
+                  xsOffset={2}
+                  sm={6}
+                  smOffset={3}
+                  md={4}
+                  mdOffset={4}
+                  lg={5}
+                  lgOffset={1}
+                >
+                  <Image
+                    src={require("./images/aws-home-logo.jpg")}
+                    responsive
+                    style={{ marginBottom: 10 }}
                   />
-                  <ListItem
-                    primaryText="Production-ready and Secure"
-                    leftIcon={<Security />}
+                  <Image
+                    src={require("./images/react-logo.png")}
+                    style={{ maxHeight: 120, marginTop: 10, marginBottom: 10 }}
+                    responsive
                   />
-                  <ListItem
-                    primaryText="Services/Products"
-                    leftIcon={<Settings />}
-                  />
-                  {/*<ListItem primaryText="Inbox" leftIcon={< />} />*/}
-                </List>
-                <br />
-              </Col>
-            </Row>
-          </Card>
-        </Col>
-        <Col xs={12}>
-          <Card style={{ marginTop: 10, marginBottom: 10 }}>
-            <Row>
-              <Col xs={12} style={{ marginTop: 20, marginBottom: 80 }}>
-                <h3 style={{ textAlign: "center", padding: 20 }}>
-                  Trusted Infrastructure and Technology Stack
-                </h3>
-              </Col>
-              <Col
-                xs={8}
-                xsOffset={2}
-                sm={6}
-                smOffset={3}
-                md={4}
-                mdOffset={4}
-                lg={5}
-                lgOffset={1}
-              >
-                <Image src={require("./images/aws-home-logo.jpg")} responsive style={{ marginBottom: 10 }} />
-                <Image src={require("./images/react-logo.png")} style={{ maxHeight: 120, marginTop: 10, marginBottom: 10 }} responsive />
-              </Col>
-              <Col xs={8} xsOffset={2} sm={6} smOffset={3} lg={5} lgOffset={1}>
-                <List>
-                  <ListItem primaryText="Build Now!" leftIcon={<Extension />} />
-                  <ListItem
-                    primaryText="Simple Intuitive UI/UX"
-                    leftIcon={<ColorLens />}
-                  />
-                  <ListItem
-                    primaryText="Application Management and Auto Scaling"
-                    leftIcon={<Dashboard />}
-                  />
-                  <ListItem
-                    primaryText="Production-ready and Secure"
-                    leftIcon={<Security />}
-                  />
-                  <ListItem
-                    primaryText="Services/Products"
-                    leftIcon={<Settings />}
-                  />
-                  {/*<ListItem primaryText="Inbox" leftIcon={< />} />*/}
-                </List>
-                <br />
-              </Col>
-            </Row>
-          </Card>
-        </Col>
+                </Col>
+                <Col
+                  xs={8}
+                  xsOffset={2}
+                  sm={6}
+                  smOffset={3}
+                  lg={5}
+                  lgOffset={1}
+                >
+                  <List>
+                    <ListItem
+                      primaryText="Build Now!"
+                      leftIcon={<Extension />}
+                    />
+                    <ListItem
+                      primaryText="Simple Intuitive UI/UX"
+                      leftIcon={<ColorLens />}
+                    />
+                    <ListItem
+                      primaryText="Application Management and Auto Scaling"
+                      leftIcon={<Dashboard />}
+                    />
+                    <ListItem
+                      primaryText="Production-ready and Secure"
+                      leftIcon={<Security />}
+                    />
+                    <ListItem
+                      primaryText="Services/Products"
+                      leftIcon={<Settings />}
+                    />
+                    {/*<ListItem primaryText="Inbox" leftIcon={< />} />*/}
+                  </List>
+                  <br />
+                </Col>
+              </Row>
+            </Card>
+          </Col>
+        </Row>
         {/*<Col xs={12}>
           <div
             style={{
@@ -229,13 +400,13 @@ export default class Welcome extends Component {
           <Paper zDepth={1}>
             <BottomNavigation selectedIndex={this.state.selectedIndex}>
               <BottomNavigationItem
-                label="Recents"
-                icon={recentsIcon}
+                label="Nearby"
+                icon={nearbyIcon}
                 onTouchTap={() => this.select(0)}
               />
               <BottomNavigationItem
-                label="Favorites"
-                icon={favoritesIcon}
+                label="Nearby"
+                icon={nearbyIcon}
                 onTouchTap={() => this.select(1)}
               />
               <BottomNavigationItem

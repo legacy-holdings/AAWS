@@ -1,0 +1,37 @@
+.quickstart-header {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: 3vw;
+}
+
+@media (max-width: 600px) {
+  .quickstart-header {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+      font-size: 22px;
+  } 
+}
+
+@media (min-width: 1200px) {
+  .quickstart-header {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+      font-size: 40px;
+  } 
+}
+
+@media (min-width: 1600px) {
+  .quickstart-header {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+      font-size: 40px;
+  } 
+}
