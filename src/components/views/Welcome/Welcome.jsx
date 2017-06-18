@@ -78,7 +78,7 @@ export default class Welcome extends Component {
             responsive
           />*/}
             <div style={{ width: "100%", minHeight: 300, maxHeight: 700 }}>
-              <Particles
+              {/*<Particles
                 minHeight="100%"
                 params={{
                   particles: {
@@ -91,6 +91,10 @@ export default class Welcome extends Component {
                     }
                   }
                 }}
+              />*/}
+              <img
+                style={{ width: "100%", minHeight: 300, opacity: 0.3 }}
+                src={require("./images/nn-green.jpg")}
               />
             </div>
             <Row>
