@@ -46,7 +46,8 @@ export default class Welcome extends Component {
 
     this.state = {
       selectedIndex: 0,
-      staticJumbotron: false
+      staticJumbotron: false,
+      fullWidthBackground: false
     };
   }
 
@@ -63,11 +64,13 @@ export default class Welcome extends Component {
 
     if (w <= 1000) {
       this.setState({
-        staticJumbotron: true
+        staticJumbotron: true,
+        fullWidthBackground: false
       });
     } else {
       this.setState({
-        staticJumbotron: false
+        staticJumbotron: false,
+        fullWidthBackground: true
       });
     }
   };
@@ -83,12 +86,16 @@ export default class Welcome extends Component {
     );
     const nearbyIcon = <IconLocationOn />;
 
-    const backgroundJumbotron = this.state.staticJumbotron
+    let backgroundJumbotron = this.state.staticJumbotron
       ? <img
           style={{ width: "100%", minHeight: 300, opacity: 0.3 }}
           src={require("./images/nn-green.jpg")}
         />
-      : <Particles
+      : <div />;
+
+    if (this.state.fullWidthBackground) {
+      backgroundJumbotron = (
+        <Particles
           minHeight="100%"
           params={{
             particles: {
@@ -101,7 +108,10 @@ export default class Welcome extends Component {
               }
             }
           }}
-        />;
+        />
+      );
+    }
+
     return (
       <div>
         <Row style={{ marginBottom: 60 }}>
