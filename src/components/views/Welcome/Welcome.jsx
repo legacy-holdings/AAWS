@@ -36,6 +36,7 @@ import {
 } from "material-ui/BottomNavigation";
 import Paper from "material-ui/Paper";
 import IconLocationOn from "material-ui/svg-icons/communication/location-on";
+import $ from "jquery";
 
 import "./Welcome.css";
 
@@ -44,9 +45,32 @@ export default class Welcome extends Component {
     super();
 
     this.state = {
-      selectedIndex: 0
+      selectedIndex: 0,
+      staticJumbotron: false
     };
   }
+
+  componentDidMount() {
+    setInterval(() => {
+      this.checkWidth();
+    }, 200);
+  }
+
+  checkWidth = () => {
+    const w = $(window).width();
+
+    console.log(w);
+
+    if (w <= 1000) {
+      this.setState({
+        staticJumbotron: true
+      });
+    } else {
+      this.setState({
+        staticJumbotron: false
+      });
+    }
+  };
 
   select = index => {
     this.setState({ selectedIndex: index });
@@ -59,6 +83,25 @@ export default class Welcome extends Component {
     );
     const nearbyIcon = <IconLocationOn />;
 
+    const backgroundJumbotron = this.state.staticJumbotron
+      ? <img
+          style={{ width: "100%", minHeight: 300, opacity: 0.3 }}
+          src={require("./images/nn-green.jpg")}
+        />
+      : <Particles
+          minHeight="100%"
+          params={{
+            particles: {
+              line_linked: {
+                shadow: {
+                  enable: true,
+                  color: "black",
+                  blur: 1
+                }
+              }
+            }
+          }}
+        />;
     return (
       <div>
         <Row style={{ marginBottom: 60 }}>
@@ -78,24 +121,7 @@ export default class Welcome extends Component {
             responsive
           />*/}
             <div style={{ width: "100%", minHeight: 300, maxHeight: 700 }}>
-              {/*<Particles
-                minHeight="100%"
-                params={{
-                  particles: {
-                    line_linked: {
-                      shadow: {
-                        enable: true,
-                        color: "black",
-                        blur: 1
-                      }
-                    }
-                  }
-                }}
-              />*/}
-              <img
-                style={{ width: "100%", minHeight: 300, opacity: 0.3 }}
-                src={require("./images/nn-green.jpg")}
-              />
+              {backgroundJumbotron}
             </div>
             <Row>
               <Col xs={10} xsOffset={1} className="welcome-header">

@@ -1,0 +1,17 @@
+{
+  "name": "S3",
+  "version": "1.0.0",
+  "description": "AWS S3 Instance",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "[S3]"
+  ],
+  "author": "StudyBank LLC",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "aws-sdk": "^2.69.0"
+  }
+}
