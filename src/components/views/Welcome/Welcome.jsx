@@ -54,7 +54,7 @@ export default class Welcome extends Component {
   componentDidMount() {
     setInterval(() => {
       this.checkWidth();
-    }, 200);
+    }, 100);
   }
 
   checkWidth = () => {
@@ -91,7 +91,7 @@ export default class Welcome extends Component {
           style={{ width: "100%", minHeight: 300, opacity: 0.3 }}
           src={require("./images/nn-green.jpg")}
         />
-      : <div />;
+      : <div style={{ width: "100%", minHeight: 700, opacity: 0.3 }} />;
 
     if (this.state.fullWidthBackground) {
       backgroundJumbotron = (
