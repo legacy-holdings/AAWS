@@ -37,6 +37,7 @@ import {
 import Paper from "material-ui/Paper";
 import IconLocationOn from "material-ui/svg-icons/communication/location-on";
 import $ from "jquery";
+import TypeWriter from 'react-typewriter';
 
 import "./Welcome.css";
 
@@ -136,7 +137,7 @@ export default class Welcome extends Component {
             <Row>
               <Col xs={10} xsOffset={1} className="welcome-header">
                 Launch a personalized <br />
-                <span style={{ fontStyle: "italic" }}>"Hello World"</span>
+                <TypeWriter typing={1}><span style={{ fontStyle: "italic" }}>"Hello World"</span></TypeWriter>
                 {" "}
                 <br />
                 <a href="https://aws.amazon.com/" target="_blank">
