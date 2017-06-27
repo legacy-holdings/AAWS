@@ -41,7 +41,7 @@ export default class NavDrawer extends Component {
           <NavLink to="/user">
             <ListItem
               onTouchTap={this.handleClose}
-              primaryText="James Anderson"
+              primaryText="John the Baptist"
               leftAvatar={
                 <Avatar
                   style={{ background: "black" }}
