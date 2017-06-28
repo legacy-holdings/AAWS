@@ -29,6 +29,7 @@ import Settings from "material-ui/svg-icons/action/settings";
 import Particles from "react-particles-js";
 import FontIcon from "material-ui/FontIcon";
 import Cloud from "material-ui/svg-icons/file/cloud";
+import LightBulbOutline from "material-ui/svg-icons/action/lightbulb-outline.js";
 import RaisedButton from "material-ui/RaisedButton";
 import {
   BottomNavigation,
@@ -37,7 +38,7 @@ import {
 import Paper from "material-ui/Paper";
 import IconLocationOn from "material-ui/svg-icons/communication/location-on";
 import $ from "jquery";
-import TypeWriter from 'react-typewriter';
+import TypeWriter from "react-typewriter";
 
 import "./Welcome.css";
 
@@ -137,7 +138,11 @@ export default class Welcome extends Component {
             <Row>
               <Col xs={10} xsOffset={1} className="welcome-header">
                 Launch a personalized <br />
-                <TypeWriter typing={1}><span style={{ fontStyle: "italic" }}>"Hello World"</span></TypeWriter>
+                <TypeWriter typing={1}>
+                  <span style={{ fontStyle: "italic" }}>
+                    "Hello World"
+                  </span>
+                </TypeWriter>
                 {" "}
                 <br />
                 <a href="https://aws.amazon.com/" target="_blank">
@@ -157,9 +162,9 @@ export default class Welcome extends Component {
                 xsOffset={1}
                 sm={10}
                 smOffset={1}
-                md={4}
+                md={6}
                 mdOffset={0}
-                lg={4}
+                lg={3}
                 lgOffset={0}
                 style={{
                   textAlign: "center",
@@ -179,7 +184,7 @@ export default class Welcome extends Component {
                 >*/}
                 <NavLink to="/quickstart">
                   <RaisedButton
-                    label="Go Cloud"
+                    label="Cloud Services"
                     icon={
                       <Cloud
                         style={{
@@ -202,9 +207,9 @@ export default class Welcome extends Component {
                 xsOffset={1}
                 sm={10}
                 smOffset={1}
-                md={4}
+                md={6}
                 mdOffset={0}
-                lg={4}
+                lg={3}
                 lgOffset={0}
                 style={{
                   textAlign: "center",
@@ -218,7 +223,7 @@ export default class Welcome extends Component {
               >
                 <NavLink to="/quickstart">
                   <RaisedButton
-                    label="Go Mobile"
+                    label="Native Mobile Apps"
                     icon={
                       <Iphone
                         style={{
@@ -240,9 +245,9 @@ export default class Welcome extends Component {
                 xsOffset={1}
                 sm={10}
                 smOffset={1}
-                md={4}
+                md={6}
                 mdOffset={0}
-                lg={4}
+                lg={3}
                 lgOffset={0}
                 style={{
                   textAlign: "center",
@@ -256,9 +261,47 @@ export default class Welcome extends Component {
               >
                 <NavLink to="/quickstart">
                   <RaisedButton
-                    label="Go Web"
+                    label="Responsive Web Apps"
                     icon={
                       <Computer
+                        style={{
+                          width: 50,
+                          height: 50,
+                          marginBottom: 5,
+                          marginTop: 5,
+                          color: "white"
+                        }}
+                      />
+                    }
+                    style={{ width: "90%", height: 110 }}
+                    primary={true}
+                  />
+                </NavLink>
+              </Col>
+              <Col
+                xs={10}
+                xsOffset={1}
+                sm={10}
+                smOffset={1}
+                md={6}
+                mdOffset={0}
+                lg={3}
+                lgOffset={0}
+                style={{
+                  textAlign: "center",
+                  marginBottom: 20,
+                  marginTop: 0,
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  display: "block"
+                }}
+              >
+                <NavLink to="/quickstart">
+                  <RaisedButton
+                    label="VR Apps"
+                    icon={
+                      <LightBulbOutline
                         style={{
                           width: 50,
                           height: 50,
